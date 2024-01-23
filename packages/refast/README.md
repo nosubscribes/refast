@@ -1,2 +1,2 @@
 # refast
-A fast react web framework
+[README](../../README.md)
