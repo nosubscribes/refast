@@ -1,2 +1,1 @@
-# refast
-A fast react web framework
+packages/refast/README.md

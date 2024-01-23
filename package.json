@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "description": "A fast react web framework",
+  "license": "MIT",
+  "repository": "https://github.com/nosubscribes/refast",
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "@typescript-eslint/eslint-plugin": "^5.60.0",
+    "@typescript-eslint/parser": "^5.60.0",
+    "eslint": "^8.56.0",
+    "husky": "^8.0.3",
+    "prettier": "^3.2.4",
+    "turbo": "^1.11.3"
+  },
+  "packageManager": "pnpm@8.9.0",
+  "engines": {
+    "node": ">=16"
+  }
+}

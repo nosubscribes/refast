@@ -1,0 +1,20 @@
+{
+  "name": "create-refast-app",
+  "version": "0.0.1",
+  "description": "create-refast-app",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "types": "index.d.ts",
+  "homepage": "https://github.com/nosubscribes/refast#readme",
+  "bugs": "https://github.com/nosubscribes/refast/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nosubscribes/refast"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "authors": [
+    "luoluoqixi <luoqixi@luoqixi.com> (https://github.com/luoluoqixi)"
+  ]
+}
