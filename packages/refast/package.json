@@ -4,6 +4,7 @@
   "description": "refast",
   "main": "dist/index.js",
   "license": "MIT",
+  "type": "module",
   "types": "index.d.ts",
   "homepage": "https://github.com/nosubscribes/refast#readme",
   "bugs": "https://github.com/nosubscribes/refast/issues",
@@ -11,6 +12,15 @@
     "type": "git",
     "url": "https://github.com/nosubscribes/refast"
   },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "authors": [
+    "luoluoqixi <luoqixi@luoqixi.com> (https://github.com/luoluoqixi)"
+  ],
   "keywords": [
     "refast",
     "react",
@@ -21,10 +31,20 @@
     "routes",
     "nextjs"
   ],
-  "engines": {
-    "node": ">=16"
+  "devDependencies": {
+    "@types/react": "^18.2.48",
+    "vite": "^5.0.12",
+    "vitest": "^1.2.1",
+    "@nosubscribes/vite-config": "workspace:*"
   },
-  "authors": [
-    "luoluoqixi <luoqixi@luoqixi.com> (https://github.com/luoluoqixi)"
-  ]
+  "peerDependencies": {
+    "react": ">=18",
+    "vite": ">=4"
+  },
+  "scripts": {
+    "dev": "vitest run index.test.ts",
+    "build": "tsc && vite build",
+    "lint": "npx eslint src test",
+    "test": "vitest run index.test.ts"
+  }
 }

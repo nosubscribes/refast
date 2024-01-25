@@ -1,5 +1,5 @@
 {
-  "name": "create-refast-app",
+  "name": "@nosubscribes/create-refast-app",
   "version": "0.0.1",
   "description": "create-refast-app",
   "main": "dist/index.js",
@@ -10,6 +10,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/nosubscribes/refast"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "engines": {
     "node": ">=16"
