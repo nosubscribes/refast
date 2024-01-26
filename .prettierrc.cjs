@@ -11,7 +11,7 @@ module.exports = {
   importOrderCaseInsensitive: false, // 用于在用于对每个匹配组内的导入进行排序的排序算法中启用不区分大小写
   jsxSingleQuote: false,
   pluginSearchDirs: false, // 不自动加载插件, 不然会自动加载一些明明没有配置的插件进去导致问题
-  printWidth: 120, // 每行最长代码长度
+  printWidth: 100, // 每行最长代码长度
   proseWrap: 'preserve', // 使用默认的拆行标准
   quoteProps: 'consistent', // 是否有引号配置
   semi: false, // 自动加分号

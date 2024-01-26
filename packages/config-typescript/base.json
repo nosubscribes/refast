@@ -1,6 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
+    "allowJs": true,
     "baseUrl": ".",
     "declaration": true,
     "declarationMap": true,
@@ -18,10 +19,7 @@
     "rootDir": ".",
     "skipLibCheck": true,
     "strict": true,
-    "target": "ES2022",
-    "paths": {
-      "@refast/*": ["packages/refast/src/*"]
-    }
+    "target": "ES2022"
   },
-  "include": ["packages/*/src", "scripts/*"]
+  "exclude": ["node_modules"]
 }

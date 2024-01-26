@@ -32,10 +32,12 @@
     "nextjs"
   ],
   "devDependencies": {
+    "@nosubscribes/config-eslint": "workspace:*",
+    "@nosubscribes/config-vite": "workspace:*",
+    "@nosubscribes/config-typescript": "workspace:*",
     "@types/react": "^18.2.48",
     "vite": "^5.0.12",
-    "vitest": "^1.2.1",
-    "@nosubscribes/vite-config": "workspace:*"
+    "vitest": "^1.2.1"
   },
   "peerDependencies": {
     "react": ">=18",
@@ -43,7 +45,7 @@
   },
   "scripts": {
     "dev": "vitest run index.test.ts",
-    "build": "tsc && vite build",
+    "build": "pnpm run lint && vite build",
     "lint": "npx eslint src test",
     "test": "vitest run index.test.ts"
   }

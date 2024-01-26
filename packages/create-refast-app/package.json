@@ -19,5 +19,12 @@
   },
   "authors": [
     "luoluoqixi <luoqixi@luoqixi.com> (https://github.com/luoluoqixi)"
-  ]
+  ],
+  "devDependencies": {
+    "@nosubscribes/config-eslint": "workspace:*",
+    "@nosubscribes/config-vite": "workspace:*",
+    "@nosubscribes/config-typescript": "workspace:*",
+    "vite": "^5.0.12",
+    "vitest": "^1.2.1"
+  }
 }

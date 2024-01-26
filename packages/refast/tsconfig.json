@@ -1,11 +1,12 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "@nosubscribes/config-typescript/vite.json",
   "exclude": ["node_modules/**/*"],
   "include": ["src/**/*", "test/**/*", "package.json", "vite.config.ts"],
   "compilerOptions": {
+    "rootDir": ".",
     "types": ["vite/client", "vitest/globals"],
     "paths": {
-      "@/*": ["packages/refast/src/*"]
+      "@/*": ["src/*"]
     }
   }
 }
