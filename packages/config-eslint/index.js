@@ -15,12 +15,7 @@ module.exports = {
       },
       parser: '@typescript-eslint/parser',
       plugins: ['@typescript-eslint', 'jest'],
-      extends: [
-        'eslint:all',
-        'prettier',
-        'plugin:prettier/recommended',
-        'plugin:@typescript-eslint/recommended'
-      ],
+      extends: ['eslint:recommended', 'prettier'],
       rules: {
         'indent': [
           // 缩进: https://eslint.org/docs/latest/rules/indent

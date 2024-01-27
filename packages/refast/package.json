@@ -32,7 +32,7 @@
     "nextjs"
   ],
   "devDependencies": {
-    "@nosubscribes/config-eslint": "workspace:*",
+    "@nosubscribes/eslint-config": "workspace:*",
     "@nosubscribes/config-vite": "workspace:*",
     "@nosubscribes/config-typescript": "workspace:*",
     "@types/react": "^18.2.48",

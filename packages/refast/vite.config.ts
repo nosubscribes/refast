@@ -6,17 +6,13 @@ import { defineConfig } from 'vite'
 
 import pkg from './package.json'
 
+const libConfig = getConfig({
+  entry: path.resolve(__dirname, 'src/index.ts'),
+  libName: pkg.name
+})
+
 // https://cn.vitejs.dev/config/
 export default defineConfig({
-  ...getConfig({
-    entry: path.resolve(__dirname, 'src/index.ts'),
-    libName: pkg.name
-  }),
-  resolve: {
-    // 路径别名
-    alias: {
-      '@': path.join(__dirname, 'src')
-    }
-  },
+  ...libConfig,
   root: __dirname // 根目录
 })

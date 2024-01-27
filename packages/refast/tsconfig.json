@@ -4,9 +4,6 @@
   "include": ["src/**/*", "test/**/*", "package.json", "vite.config.ts"],
   "compilerOptions": {
     "rootDir": ".",
-    "types": ["vite/client", "vitest/globals"],
-    "paths": {
-      "@/*": ["src/*"]
-    }
+    "types": ["vite/client", "vitest/globals"]
   }
 }

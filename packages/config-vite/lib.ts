@@ -12,7 +12,7 @@ const getConfig = ({ libName, entry }: { libName: string; entry: string }): User
   build: {
     ...base.build,
     lib: {
-      entry: entry,
+      entry,
       formats: ['es', 'umd', 'cjs'],
       name: libName,
       fileName: 'index'
