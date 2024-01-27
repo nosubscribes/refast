@@ -1,10 +1,9 @@
-/// <reference types="vitest" />
-/// <reference types="vite" />
-import type { UserConfig } from 'vite'
 import dts from 'vite-plugin-dts'
 
-// https://cn.vitejs.dev/config/
-const viteConfig: UserConfig = {
+/**
+ * @type {import('vite').UserConfig}
+ */
+const base = {
   base: '/',
   cacheDir: 'node_modules/.vite', // 缓存目录位置
   clearScreen: true, // 设为 false 可以避免 Vite 清屏而错过在终端中打印某些关键信息
@@ -39,4 +38,29 @@ const viteConfig: UserConfig = {
   }
 }
 
-export default viteConfig
+/**
+ * @param {*} param0 config
+ * @param {string} param0.libName libName
+ * @param {string} param0.entry entry
+ * @returns {import('vite').UserConfig}
+ */
+const getLib = ({ libName, entry }) => ({
+  ...base,
+  // 共享配置: https://cn.vitejs.dev/config/shared-options.html
+  appType: 'custom', // 指定app类型: spa单页应用、mpa多页应用、custom自定义
+  build: {
+    ...base.build,
+    lib: {
+      entry,
+      formats: ['es', 'umd', 'cjs'],
+      name: libName,
+      fileName: 'index'
+    }
+  },
+  test: {
+    ...base.test,
+    environment: 'node'
+  }
+})
+
+export { base, getLib }

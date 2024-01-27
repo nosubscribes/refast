@@ -1,12 +1,12 @@
 /// <reference types="vitest" />
 /// <reference types="vite" />
-import getConfig from '@nosubscribes/config-vite/lib'
+import { getLib } from '@nosubscribes/config-vite'
 import path from 'path'
 import { defineConfig } from 'vite'
 
 import pkg from './package.json'
 
-const libConfig = getConfig({
+const libConfig = getLib({
   entry: path.resolve(__dirname, 'src/index.ts'),
   libName: pkg.name
 })

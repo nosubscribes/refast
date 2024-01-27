@@ -91,6 +91,9 @@ importers:
       autoprefixer:
         specifier: ^10.4.17
         version: 10.4.17(postcss@8.4.33)
+      esbuild:
+        specifier: ^0.19.12
+        version: 0.19.12
       tailwindcss:
         specifier: ^3.4.1
         version: 3.4.1

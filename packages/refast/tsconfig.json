@@ -1,7 +1,7 @@
 {
-  "extends": "@nosubscribes/config-typescript/vite.json",
+  "extends": "@nosubscribes/config-typescript/base.json",
   "exclude": ["node_modules/**/*"],
-  "include": ["src/**/*", "test/**/*", "package.json", "vite.config.ts"],
+  "include": ["src/**/*", "test/**/*", "package.json"],
   "compilerOptions": {
     "rootDir": ".",
     "types": ["vite/client", "vitest/globals"]
