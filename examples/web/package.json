@@ -1,0 +1,23 @@
+{
+  "name": "@nosubscribes/refast-example-web",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --force",
+    "build": "tsc && vite build",
+    "lint": "npx eslint src test",
+    "preview": "vite preview",
+    "test": "vitest run sample.test.ts"
+  },
+  "dependencies": {
+    "@nosubscribes/refast": "workspace:*",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@nosubscribes/refast-dev": "workspace:*",
+    "react": ">=18",
+    "vite": "^5.0.12",
+    "vitest": "^1.2.1"
+  }
+}

@@ -1,3 +1,2 @@
-import React from 'react'
-
-console.log(React.version)
+export * from './components'
+export * from './hooks'

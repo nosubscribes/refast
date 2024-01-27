@@ -8,5 +8,5 @@ export declare const getLib: ({
 }: {
   libName: string
   entry: string
-  exceptDeps: Array<string | RegExp> | undefined
+  exceptDeps?: Array<string | RegExp> | undefined
 }) => UserConfig
