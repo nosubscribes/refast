@@ -1,1 +1,3 @@
-console.log('refast init')
+import React from 'react'
+
+console.log(React.version)

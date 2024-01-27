@@ -13,5 +13,8 @@
   "peerDependencies": {
     "vite": "^5.0.12",
     "vitest": "^1.2.1"
+  },
+  "devDependencies": {
+    "vite-plugin-externalize-deps": "^0.8.0"
   }
 }

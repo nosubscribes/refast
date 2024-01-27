@@ -1,4 +1,5 @@
 import dts from 'vite-plugin-dts'
+import { externalizeDeps } from 'vite-plugin-externalize-deps'
 
 /**
  * @type {import('vite').UserConfig}
@@ -44,7 +45,7 @@ const base = {
  * @param {string} param0.entry entry
  * @returns {import('vite').UserConfig}
  */
-const getLib = ({ libName, entry }) => ({
+const getLib = ({ libName, entry, exceptDeps }) => ({
   ...base,
   // 共享配置: https://cn.vitejs.dev/config/shared-options.html
   appType: 'custom', // 指定app类型: spa单页应用、mpa多页应用、custom自定义
@@ -57,6 +58,19 @@ const getLib = ({ libName, entry }) => ({
       fileName: 'index'
     }
   },
+  plugins: [
+    // 外部化模块依赖, 发布库时需要
+    // https://github.com/davidmyersdev/vite-plugin-externalize-deps
+    externalizeDeps({
+      deps: true,
+      devDeps: true,
+      nodeBuiltins: true,
+      peerDeps: true,
+      optionalDeps: true,
+      except: exceptDeps || []
+    }),
+    ...base.plugins
+  ],
   test: {
     ...base.test,
     environment: 'node'
